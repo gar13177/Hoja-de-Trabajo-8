@@ -26,23 +26,15 @@ public class TreeMapWord implements WordSet {
     public TreeMapWord()
     {
         base = new TreeMap<>();
+    }    
+
+    @Override
+    public void add(Word wordObject) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public Word get(Word word)
-    {
-        Integer[] mapKeys = new Integer[base.size()];
-        int pos = 0;
-        for(Integer key : base.keySet()){
-            mapKeys[pos++] = key;
-        }
-        int index = base.indexOf(word);
-        if(index == -1) return null;
-        return base.get(index);
+    @Override
+    public Word get(Word word) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    public void add(Word wordObject)
-    {
-        base.add(wordObject);
-    }
-    
 }
