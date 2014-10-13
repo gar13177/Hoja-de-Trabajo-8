@@ -1,7 +1,5 @@
 package hojadetrabajo;
 
-import java.util.*;
-
 /*
 UVG
 Algoritmos y Estructuras de Datos - 2011
@@ -24,6 +22,7 @@ class WordSetFactory {
 	    if (tipo == 1) return new SimpleSet();
             if (tipo == 2) return new RedBlackBST();
             if (tipo == 3) return new SimpleSet();
+            if (tipo == 4) return new HashTableWord();
             if (tipo == 5) return new TreeMapWord();
             return new SimpleSet();
 	}

@@ -43,8 +43,7 @@ public class RedBlackBST implements WordSet {
     private final int compare( Comparable item, RedBlackNode t ) {
         if( t == header )
             return 1;
-        else
-            return item.compareTo( t.element );
+        return item.compareTo(t.element);
     }
     
     /**
@@ -67,8 +66,10 @@ public class RedBlackBST implements WordSet {
         }
         
         // Insertion fails if already present
+        /*
         if( current != nullNode )
             throw new DuplicateItemException( item.toString( ) );
+        */
         current = new RedBlackNode( item, nullNode, nullNode );
         
         // Attach to parent

@@ -14,20 +14,20 @@
  */
 package hojadetrabajo;
 
+import java.util.Hashtable;
 import java.util.Iterator;
-import java.util.TreeMap;
 
 /**
  *
  * @author Kevin
  */
-public class TreeMapWord implements WordSet {
-    private TreeMap<Integer,Word> base;
+public class HashTableWord implements WordSet{
+    private Hashtable<Integer,Word> base;
     private int i = 0;
 	
-    public TreeMapWord()
+    public HashTableWord()
     {
-        base = new TreeMap<>();
+        base = new Hashtable<>();
     }    
 
     @Override
@@ -47,4 +47,5 @@ public class TreeMapWord implements WordSet {
         }
         return null;        
     }
+    
 }
