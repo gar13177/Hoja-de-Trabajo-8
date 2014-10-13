@@ -14,38 +14,28 @@
  */
 package hojadetrabajo;
 
-
-
 /**
  *
  * @author Kevin
  */
-
-public class RedBlackBST implements WordSet {
-    /**
-     * Construct the tree.
-     */
-    private RBTree<Integer,Word> base;
+public class SplayTreeWord implements WordSet {
+    private SplayTree base;
     private int i = 0;
     
-    public RedBlackBST( ) {
-        base = new RBTree<Integer,Word>();
+    public SplayTreeWord( ) {
+        base = new SplayTree();
     }
 
     @Override
     public void add(Word wordObject) {
-        base.insert(i,wordObject);
+        base.insert(wordObject);
         i++;
         
     }
 
     @Override
     public Word get(Word word) {
-        for (int j=0;j<i;j++){
-            Word temp = base.lookup(j);
-            if (temp.equals(word)) return temp;
-        }
-        return null; 
+        return base.find(word);
     }
-      
+    
 }

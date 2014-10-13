@@ -9,10 +9,12 @@ Autor: Eduardo Castellanos
 Descripci�n: Programa principal. 
 */
 import java.io.*;
+import java.util.Scanner;
 
 class WordTypeCounter {
 	public static void main(String[] args) throws Exception
 	{
+                Scanner in  = new Scanner(System.in);
 		if(args.length > 1)
 		{
 			// Declaraci�n e inicializaci�n de variables.
@@ -30,8 +32,14 @@ class WordTypeCounter {
 			//  3 Splay Tree
 			//  4 Hash Table
 			//  5 TreeMap (de java collection framework)
-			int implementacion = Integer.parseInt(args[2]);
-			
+                        System.out.println("Ingrese el tipo de implementacion");
+                        System.out.println("1.SimpleSet");
+                        System.out.println("2.Red Black Tree");
+                        System.out.println("3.Splay Tree");
+                        System.out.println("4.Hash Table");
+                        System.out.println("5.TreeMap");
+                        int implementacion = in.nextInt();
+                        
 			BufferedReader wordreader;
 			BufferedReader textreader;
 			
